@@ -27,7 +27,7 @@ Civic Navigation solves this by acting as a knowledgeable, always-available guid
 
 ---
 
-## ✨ Features
+##  Features
 
 ### Service-Specific Dedicated Assistants
 Six dedicated AI assistants, each tuned to a specific service domain:
@@ -111,7 +111,7 @@ Six dedicated AI assistants, each tuned to a specific service domain:
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────┐
