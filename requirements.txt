@@ -1,0 +1,6 @@
+streamlit
+python-dotenv
+pinecone
+langchain-pinecone
+langchain-google-genai
+requests

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>National Identity Card - PublicGuide AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#abcbdb",
+                        "on-tertiary-fixed": "#2e1503",
+                        "on-surface-variant": "#42484b",
+                        "surface-variant": "#e3e2e3",
+                        "on-secondary-container": "#6b4800",
+                        "primary": "#446370",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c2c7cb",
+                        "on-secondary-fixed-variant": "#614000",
+                        "on-primary-fixed-variant": "#2c4b58",
+                        "surface-container": "#eeedee",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#ffdcc6",
+                        "secondary": "#805600",
+                        "on-tertiary-fixed-variant": "#603f28",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#ffba44",
+                        "on-primary-container": "#415f6c",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#faf9fa",
+                        "primary-fixed": "#c7e7f8",
+                        "tertiary-fixed-dim": "#edbd9e",
+                        "surface-container-high": "#e8e8e9",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#abcbdb",
+                        "primary-container": "#b8d8e8",
+                        "on-primary-fixed": "#001f29",
+                        "surface-dim": "#dadadb",
+                        "inverse-surface": "#2f3131",
+                        "surface-container-low": "#f4f3f4",
+                        "tertiary-container": "#fac9aa",
+                        "surface-tint": "#446370",
+                        "background": "#faf9fa",
+                        "on-secondary-fixed": "#281800",
+                        "tertiary": "#7b563e",
+                        "on-surface": "#1a1c1d",
+                        "on-background": "#1a1c1d",
+                        "surface": "#faf9fa",
+                        "secondary-container": "#ffb21d",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f1f0f1",
+                        "surface-container-highest": "#e3e2e3",
+                        "secondary-fixed": "#ffddaf",
+                        "outline": "#72787b",
+                        "on-tertiary-container": "#77533a",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "12px",
+                        "2xl": "24px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "md": "24px",
+                        "margin": "32px",
+                        "xs": "4px",
+                        "xl": "64px",
+                        "sm": "12px",
+                        "gutter": "24px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "h2": ["Dancing Script"],
+                        "button": ["Plus Jakarta Sans"],
+                        "h1": ["Dancing Script"],
+                        "display": ["Dancing Script"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #FFF8EC; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .sun-shadow { box-shadow: 0 8px 20px rgba(61,44,0,0.05); }
+    </style>
+</head>
+<body class="text-on-background font-body-md">
+<!-- TopNavBar -->
+<header class="bg-[#FFF8EC] dark:bg-stone-950 docked full-width top-0 sticky z-50 shadow-[0_8px_20px_rgba(61,44,0,0.05)] dark:shadow-none">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-3xl font-bold italic text-[#3D2C00] dark:text-amber-500 font-display">PublicGuide AI</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-[#F0A500] dark:text-amber-400 font-bold border-b-2 border-[#F0A500] pb-1 font-label-md text-label-md" href="#">Services</a>
+<a class="text-[#3D2C00] dark:text-stone-300 hover:text-[#F0A500] transition-all duration-200 font-label-md text-label-md" href="#">AI Guide</a>
+<a class="text-[#3D2C00] dark:text-stone-300 hover:text-[#F0A500] transition-all duration-200 font-label-md text-label-md" href="#">Locator</a>
+<a class="text-[#3D2C00] dark:text-stone-300 hover:text-[#F0A500] transition-all duration-200 font-label-md text-label-md" href="#">Scam Alerts</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-10 pr-4 py-2 bg-background border-none rounded-full text-sm focus:ring-2 focus:ring-secondary-container w-64 shadow-inner" placeholder="Search services..." type="text"/>
+</div>
+<button class="bg-secondary text-on-secondary px-6 py-2.5 rounded-full font-button text-button hover:bg-secondary-container transition-all active:scale-95 shadow-sm">Sign In</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-8 py-xl">
+<!-- Hero Section / Breadcrumb -->
+<nav class="flex items-center gap-2 mb-8 text-outline">
+<span class="material-symbols-outlined text-sm">home</span>
+<span class="text-label-md font-label-md">Home</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-label-md font-label-md">Services</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-label-md font-label-md text-secondary">National Identity Card</span>
+</nav>
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Left Side: Overview & Checklist -->
+<div class="lg:w-2/3 space-y-gutter">
+<!-- Title Card -->
+<div class="bg-primary-container p-lg rounded-2xl shadow-[0_8px_20px_rgba(61,44,0,0.05)] border-l-8 border-primary relative overflow-hidden">
+<div class="relative z-10">
+<h1 class="text-display font-display text-on-primary-fixed mb-4">National Identity Card</h1>
+<p class="text-body-lg font-body-lg text-on-primary-container max-w-2xl">
+                            A secure, biometric-enabled identity document for all eligible citizens. This card serves as your primary proof of identity, citizenship, and residence for all government and private sector transactions.
+                        </p>
+</div>
+<span class="material-symbols-outlined absolute -right-8 -bottom-8 text-[160px] opacity-10 text-on-primary-fixed" data-icon="id_card">id_card</span>
+</div>
+<!-- Checklist Bento Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-surface-bright p-md rounded-2xl shadow-[0_8px_20px_rgba(61,44,0,0.05)] border border-amber-50">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="checklist">checklist</span>
+</div>
+<h3 class="text-h2 font-h2 text-on-surface">Required Documents</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-secondary text-lg" data-weight="fill">check_circle</span>
+<span class="text-body-md font-body-md">Original Birth Certificate (Digital or Physical)</span>
+</li>
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-secondary text-lg" data-weight="fill">check_circle</span>
+<span class="text-body-md font-body-md">Proof of Residency (Utility bill or Lease)</span>
+</li>
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-secondary text-lg" data-weight="fill">check_circle</span>
+<span class="text-body-md font-body-md">Two recent passport-sized photographs</span>
+</li>
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-secondary text-lg" data-weight="fill">check_circle</span>
+<span class="text-body-md font-body-md">Previous ID (if renewing or replacing)</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-bright p-md rounded-2xl shadow-[0_8px_20px_rgba(61,44,0,0.05)] border border-amber-50 overflow-hidden relative">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20" data-alt="A detailed macro shot of a modern biometric identity card with holographic elements resting on a warm wooden surface. The lighting is soft and golden, suggesting a morning sun-drenched atmosphere. The composition is clean and focused, reflecting a secure and approachable public service aesthetic with muted cream and amber tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnXet1bpIWtv7oq2DOcJtfYSbqoBw24tC4igWV6-Gqj5WNu13ZnAVGedZqc4dDY9SKzWMY-tlwCkgPL1EiBVb8eTpZzIEvua1agLNKIT-XUro-0LRjAJrCJKWzhKEmkPpUqd3zMlEmYSP5wRDRnFO5rnW3vMpBOmhjx8GHEvDI5Doc4wLD6lfiKZhcfzqXQDFv4HiN65qPZDye1h4qpPZIN_DSx9wpaHXRtZdBsU-s536atK_oiSv3OQocJ77lAkFGA0XbiNl10NnC"/>
+<div class="relative z-10">
+<h3 class="text-h2 font-h2 text-on-surface mb-4">Biometric Enrollment</h3>
+<p class="text-body-md font-body-md mb-4 text-on-surface-variant">
+                                All applicants must visit an authorized center for digital fingerprinting and iris scanning. This ensures the highest level of security for your digital identity.
+                            </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary-container/30 text-on-primary-container text-xs font-bold rounded-full uppercase tracking-tighter">Secure</span>
+<span class="px-3 py-1 bg-primary-container/30 text-on-primary-container text-xs font-bold rounded-full uppercase tracking-tighter">Biometric</span>
+<span class="px-3 py-1 bg-primary-container/30 text-on-primary-container text-xs font-bold rounded-full uppercase tracking-tighter">Validated</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Process Steps -->
+<div class="bg-white p-lg rounded-2xl shadow-[0_8px_20px_rgba(61,44,0,0.05)]">
+<h3 class="text-h2 font-h2 text-on-surface mb-8">The Application Journey</h3>
+<div class="relative space-y-8 before:absolute before:left-[19px] before:top-2 before:h-[calc(100%-16px)] before:w-0.5 before:bg-outline-variant">
+<div class="flex gap-6 relative">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold z-10 shrink-0">1</div>
+<div>
+<h4 class="font-bold text-lg text-on-surface">Online Pre-Registration</h4>
+<p class="text-on-surface-variant">Fill out the digital form and upload scanned copies of your supporting documents.</p>
+</div>
+</div>
+<div class="flex gap-6 relative">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold z-10 shrink-0">2</div>
+<div>
+<h4 class="font-bold text-lg text-on-surface">Appointment Scheduling</h4>
+<p class="text-on-surface-variant">Choose your nearest enrollment center and pick a convenient time slot.</p>
+</div>
+</div>
+<div class="flex gap-6 relative">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold z-10 shrink-0">3</div>
+<div>
+<h4 class="font-bold text-lg text-on-surface">Physical Verification</h4>
+<p class="text-on-surface-variant">Visit the center for biometric data capture and physical document verification.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: CTA, Fees, AI Tips -->
+<div class="lg:w-1/3 space-y-gutter">
+<!-- Eligibility Check CTA -->
+<div class="bg-secondary-container p-8 rounded-3xl shadow-[0_12px_32px_rgba(240,165,0,0.15)] flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-on-secondary-container text-5xl mb-4" data-icon="verified_user">verified_user</span>
+<h3 class="text-2xl font-bold text-on-secondary-container mb-2">Check Your Eligibility</h3>
+<p class="text-on-secondary-container opacity-80 mb-6">See if you are eligible for the simplified application process in just 2 minutes.</p>
+<button class="w-full bg-on-secondary-container text-surface px-6 py-4 rounded-xl font-button text-button shadow-lg hover:shadow-xl transition-all active:scale-95">Start Eligibility Check</button>
+</div>
+<!-- Fees Card -->
+<div class="bg-surface-bright p-md rounded-2xl shadow-[0_8px_20px_rgba(61,44,0,0.05)] border border-amber-50">
+<h3 class="text-h2 font-h2 text-on-surface mb-6">Processing Fees</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center pb-4 border-b border-surface-variant">
+<span class="text-body-md">First-time Issuance</span>
+<span class="font-bold text-secondary">Free</span>
+</div>
+<div class="flex justify-between items-center pb-4 border-b border-surface-variant">
+<span class="text-body-md">Renewal (Expired)</span>
+<span class="font-bold text-on-surface">$15.00</span>
+</div>
+<div class="flex justify-between items-center pb-4 border-b border-surface-variant">
+<span class="text-body-md">Replacement (Lost/Stolen)</span>
+<span class="font-bold text-on-surface">$25.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-body-md">Express Delivery (Opt.)</span>
+<span class="font-bold text-on-surface">$10.00</span>
+</div>
+</div>
+<p class="mt-4 text-xs text-outline italic">Fees are non-refundable and inclusive of all digital processing charges.</p>
+</div>
+<!-- AI Tips Section -->
+<div class="bg-[#fefce8] p-md rounded-2xl border-2 border-dashed border-secondary/30 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2">
+<span class="material-symbols-outlined text-secondary opacity-20 text-4xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="smart_toy">smart_toy</span>
+<span class="font-bold text-on-secondary-fixed-variant uppercase tracking-widest text-xs">AI Smart Tips</span>
+</div>
+<div class="space-y-4">
+<div class="bg-white/60 p-4 rounded-xl backdrop-blur-sm">
+<p class="text-sm font-medium text-on-surface">"Avoid wearing white clothing for your photo appointment to ensure proper contrast with the background."</p>
+</div>
+<div class="bg-white/60 p-4 rounded-xl backdrop-blur-sm">
+<p class="text-sm font-medium text-on-surface">"Tuesday mornings usually have the shortest wait times at the Central Enrollment Center."</p>
+</div>
+<div class="bg-white/60 p-4 rounded-xl backdrop-blur-sm">
+<p class="text-sm font-medium text-on-surface">"Make sure your utility bill is dated within the last 3 months for residency proof."</p>
+</div>
+</div>
+<button class="mt-6 w-full text-secondary font-bold text-sm flex items-center justify-center gap-2 hover:underline">
+                        Ask AI more tips <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#FFF8EC] dark:bg-stone-950 full-width bottom mt-20 border-t border-amber-100 dark:border-stone-800">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 max-w-7xl mx-auto gap-4">
+<div class="flex flex-col gap-2">
+<div class="text-xl font-bold italic text-[#3D2C00] font-display">PublicGuide AI</div>
+<p class="text-sm font-normal text-stone-600 dark:text-stone-400">© 2024 PublicGuide AI. Approachable Public Guidance.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-sm font-normal text-stone-600 dark:text-stone-400 hover:text-[#F0A500] transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm font-normal text-stone-600 dark:text-stone-400 hover:text-[#F0A500] transition-colors" href="#">Terms of Service</a>
+<a class="text-sm font-normal text-stone-600 dark:text-stone-400 hover:text-[#F0A500] transition-colors" href="#">Contact Us</a>
+<a class="text-sm font-normal text-stone-600 dark:text-stone-400 hover:text-[#F0A500] transition-colors" href="#">Accessibility</a>
+</div>
+</div>
+</footer>
+</body></html>

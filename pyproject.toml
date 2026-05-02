@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "civic-navigation-hec-hackathon"
+version = "0.1.0"
+description = "Civic Navigation | Pakistan Streamlit app"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit",
+    "python-dotenv",
+    "pinecone",
+    "langchain-pinecone",
+    "langchain-google-genai",
+    "requests",
+]

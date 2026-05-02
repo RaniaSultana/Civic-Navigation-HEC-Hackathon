@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#abcbdb",
+                    "on-tertiary-fixed": "#2e1503",
+                    "on-surface-variant": "#42484b",
+                    "surface-variant": "#e3e2e3",
+                    "on-secondary-container": "#6b4800",
+                    "primary": "#446370",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c2c7cb",
+                    "on-secondary-fixed-variant": "#614000",
+                    "on-primary-fixed-variant": "#2c4b58",
+                    "surface-container": "#eeedee",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#ffdcc6",
+                    "secondary": "#805600",
+                    "on-tertiary-fixed-variant": "#603f28",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#ffba44",
+                    "on-primary-container": "#415f6c",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#faf9fa",
+                    "primary-fixed": "#c7e7f8",
+                    "tertiary-fixed-dim": "#edbd9e",
+                    "surface-container-high": "#e8e8e9",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#abcbdb",
+                    "primary-container": "#b8d8e8",
+                    "on-primary-fixed": "#001f29",
+                    "surface-dim": "#dadadb",
+                    "inverse-surface": "#2f3131",
+                    "surface-container-low": "#f4f3f4",
+                    "tertiary-container": "#fac9aa",
+                    "surface-tint": "#446370",
+                    "background": "#faf9fa",
+                    "on-secondary-fixed": "#281800",
+                    "tertiary": "#7b563e",
+                    "on-surface": "#1a1c1d",
+                    "on-background": "#1a1c1d",
+                    "surface": "#faf9fa",
+                    "secondary-container": "#ffb21d",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f1f0f1",
+                    "surface-container-highest": "#e3e2e3",
+                    "secondary-fixed": "#ffddaf",
+                    "outline": "#72787b",
+                    "on-tertiary-container": "#77533a",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "md": "24px",
+                    "margin": "32px",
+                    "xs": "4px",
+                    "xl": "64px",
+                    "sm": "12px",
+                    "gutter": "24px",
+                    "lg": "48px"
+            },
+            "fontFamily": {
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "h2": ["Dancing Script"],
+                    "button": ["Plus Jakarta Sans"],
+                    "h1": ["Dancing Script"],
+                    "display": ["Dancing Script"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h2": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "h1": ["36px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { background-color: #FFF8EC; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .warm-shadow { box-shadow: 0 8px 20px rgba(61,44,0,0.05); }
+        .chat-container { height: calc(100vh - 180px); }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-[#FFF8EC] dark:bg-stone-950 docked full-width top-0 sticky z-50 shadow-[0_8px_20px_rgba(61,44,0,0.05)] dark:shadow-none">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-3xl font-bold italic text-[#3D2C00] dark:text-amber-500 font-h1">PublicGuide AI</div>
+<nav class="hidden md:flex items-center gap-8 font-medium tracking-wide">
+<a class="text-[#3D2C00] dark:text-stone-300 hover:text-[#F0A500] hover:bg-amber-50 dark:hover:bg-stone-900 transition-all duration-200" href="#">Services</a>
+<a class="text-[#F0A500] dark:text-amber-400 font-bold border-b-2 border-[#F0A500] pb-1" href="#">AI Guide</a>
+<a class="text-[#3D2C00] dark:text-stone-300 hover:text-[#F0A500] hover:bg-amber-50 dark:hover:bg-stone-900 transition-all duration-200" href="#">Locator</a>
+<a class="text-[#3D2C00] dark:text-stone-300 hover:text-[#F0A500] hover:bg-amber-50 dark:hover:bg-stone-900 transition-all duration-200" href="#">Scam Alerts</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 rounded-xl bg-[#F0A500] text-white font-button shadow-sm hover:scale-95 transition-transform">Sign In</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-8 mt-8 flex gap-8">
+<!-- Sidebar: Recent Topics & Quick Guides -->
+<aside class="hidden lg:flex flex-col w-80 gap-6">
+<!-- Recent Topics Card -->
+<div class="bg-primary-container p-md rounded-xl shadow-[0_8px_20px_rgba(61,44,0,0.05)]">
+<h3 class="font-h2 text-on-primary-container mb-4">Recent Topics</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 p-3 rounded-lg bg-[#FFF8EC] hover:bg-white transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary" data-icon="history">history</span>
+<span class="font-label-md text-on-surface">Renewing Passport 101</span>
+</li>
+<li class="flex items-center gap-3 p-3 rounded-lg bg-[#FFF8EC] hover:bg-white transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary" data-icon="history">history</span>
+<span class="font-label-md text-on-surface">Voter Registration Deadlines</span>
+</li>
+<li class="flex items-center gap-3 p-3 rounded-lg bg-[#FFF8EC] hover:bg-white transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-primary" data-icon="history">history</span>
+<span class="font-label-md text-on-surface">Small Business Grants</span>
+</li>
+</ul>
+</div>
+<!-- Quick Guides Bento -->
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-secondary-container p-md rounded-xl shadow-[0_8px_20px_rgba(61,44,0,0.05)]">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl mb-2" data-icon="verified_user">verified_user</span>
+<h4 class="font-button text-on-secondary-container text-lg">Anti-Scam Guide</h4>
+<p class="text-on-secondary-container text-sm mt-1">Protect your digital identity with our curated tips.</p>
+</div>
+<div class="bg-tertiary-container p-md rounded-xl shadow-[0_8px_20px_rgba(61,44,0,0.05)]">
+<span class="material-symbols-outlined text-on-tertiary-container text-3xl mb-2" data-icon="map">map</span>
+<h4 class="font-button text-on-tertiary-container text-lg">Local Resource Map</h4>
+<p class="text-on-tertiary-container text-sm mt-1">Find community centers and clinics near you.</p>
+</div>
+</div>
+</aside>
+<!-- Main Chat Area -->
+<section class="flex-1 flex flex-col chat-container bg-white rounded-[2rem] shadow-[0_8px_20px_rgba(61,44,0,0.05)] overflow-hidden relative border border-amber-50">
+<!-- Chat Header -->
+<div class="px-8 py-6 bg-[#FFF8EC] border-b border-amber-100 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="smart_toy">smart_toy</span>
+</div>
+<div>
+<h2 class="font-h2 text-[#3D2C00]">Assistant Spark</h2>
+<span class="text-xs font-label-md text-primary uppercase tracking-widest">Always Online</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-full hover:bg-amber-100 transition-colors">
+<span class="material-symbols-outlined text-[#3D2C00]" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Messages Area -->
+<div class="flex-1 overflow-y-auto p-8 space-y-6">
+<!-- AI Message -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-primary-container shrink-0 flex items-center justify-center mt-1">
+<span class="material-symbols-outlined text-on-primary-container text-sm" data-icon="robot_2">robot_2</span>
+</div>
+<div class="bg-primary-container p-5 rounded-2xl rounded-tl-none shadow-sm">
+<p class="text-on-primary-container font-body-md">Hello there! I'm your PublicGuide AI. How can I help you navigate public services or local resources today? I can help with anything from passport renewals to finding a local park!</p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex flex-row-reverse gap-4 max-w-[85%] ml-auto">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed shrink-0 flex items-center justify-center mt-1">
+<span class="material-symbols-outlined text-on-secondary-fixed text-sm" data-icon="person">person</span>
+</div>
+<div class="bg-secondary-fixed p-5 rounded-2xl rounded-tr-none shadow-sm">
+<p class="text-on-secondary-fixed font-body-md">I need to find out where the nearest community garden is located in Portland. Also, are there any permits required to start one?</p>
+</div>
+</div>
+<!-- AI Message with Content Card -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-primary-container shrink-0 flex items-center justify-center mt-1">
+<span class="material-symbols-outlined text-on-primary-container text-sm" data-icon="robot_2">robot_2</span>
+</div>
+<div class="space-y-4">
+<div class="bg-primary-container p-5 rounded-2xl rounded-tl-none shadow-sm">
+<p class="text-on-primary-container font-body-md">Portland has several vibrant community gardens! The closest one to your current zip code appears to be the **Rosewood Community Orchard**. Regarding permits, yes, there is a "Community Garden Development" application process.</p>
+</div>
+<!-- Result Card -->
+<div class="bg-white border border-amber-100 rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-40 object-cover" data-alt="A lush and vibrant community garden in Portland during a sun-drenched morning. Rows of organic vegetables and blooming flowers are neatly arranged in wooden raised beds. In the background, a small wooden tool shed and a compost bin are visible under the soft, warm light of the early sun. The atmosphere is peaceful, nostalgic, and approachable, reflecting a healthy urban community environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkYox2dlBddTbBbQNEsUD8n-5j8wnqZhGp3iapdvhstXwQknx1llWpWiNvxP8kl9iQFeNdXJPvawfBK4ih_OECjdx7uWT4FvcBLcvjUkuviTKzOUQGDz5UzZGfvD4yYSlGNPhmoaVLzRf3_YwBCo04kwfDNaD7k3FUNgScvmlOr8V-I09W3blLLIork99nt3bfkzDCQJu788cTqJqgfEYv9Xv6sp0vjM8hFEtz6zzWE50VHGbIRTBDtyExjB0dFKuVm69XdLJqlFQ4"/>
+<div class="p-4">
+<h5 class="font-bold text-[#3D2C00]">Rosewood Community Orchard</h5>
+<p class="text-sm text-stone-600">14127 SE Stark St, Portland, OR</p>
+<div class="mt-4 flex gap-2">
+<button class="bg-[#F0A500] text-white px-4 py-2 rounded-lg text-sm font-button">View Map</button>
+<button class="bg-amber-50 text-[#F0A500] px-4 py-2 rounded-lg text-sm font-button border border-amber-200">Permit Info</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="px-8 py-6 bg-white border-t border-amber-50">
+<div class="flex items-end gap-4 bg-[#FFF8EC] p-3 rounded-2xl border border-amber-100">
+<button class="p-2 text-stone-400 hover:text-secondary transition-colors">
+<span class="material-symbols-outlined" data-icon="attach_file">attach_file</span>
+</button>
+<textarea class="flex-1 bg-transparent border-none focus:ring-0 resize-none py-2 text-[#3D2C00] placeholder-stone-400 font-body-md h-12" placeholder="Type your question here..."></textarea>
+<button class="bg-[#F0A500] text-white p-3 rounded-xl shadow-md hover:scale-95 transition-transform flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="send" data-weight="fill">send</span>
+</button>
+</div>
+<div class="mt-3 flex justify-center gap-6">
+<button class="flex items-center gap-1 text-xs font-label-md text-stone-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="mic">mic</span> Voice Input
+                    </button>
+<button class="flex items-center gap-1 text-xs font-label-md text-stone-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="lightbulb">lightbulb</span> Suggest Topic
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#FFF8EC] dark:bg-stone-950 full-width bottom mt-20 border-t border-amber-100 dark:border-stone-800">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 max-w-7xl mx-auto gap-4">
+<div class="text-xl font-bold italic text-[#3D2C00] font-h2">PublicGuide AI</div>
+<div class="text-sm font-normal text-[#3D2C00] dark:text-stone-400">© 2024 PublicGuide AI. Approachable Public Guidance.</div>
+<div class="flex gap-6">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#F0A500] dark:hover:text-amber-400 transition-colors text-sm" href="#">Privacy Policy</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#F0A500] dark:hover:text-amber-400 transition-colors text-sm" href="#">Terms of Service</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#F0A500] dark:hover:text-amber-400 transition-colors text-sm" href="#">Contact Us</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#F0A500] dark:hover:text-amber-400 transition-colors text-sm" href="#">Accessibility</a>
+</div>
+</div>
+</footer>
+</body></html>

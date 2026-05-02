@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Locator | PublicGuide AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#abcbdb",
+                    "on-tertiary-fixed": "#2e1503",
+                    "on-surface-variant": "#42484b",
+                    "surface-variant": "#e3e2e3",
+                    "on-secondary-container": "#6b4800",
+                    "primary": "#446370",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c2c7cb",
+                    "on-secondary-fixed-variant": "#614000",
+                    "on-primary-fixed-variant": "#2c4b58",
+                    "surface-container": "#eeedee",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#ffdcc6",
+                    "secondary": "#805600",
+                    "on-tertiary-fixed-variant": "#603f28",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#ffba44",
+                    "on-primary-container": "#415f6c",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#faf9fa",
+                    "primary-fixed": "#c7e7f8",
+                    "tertiary-fixed-dim": "#edbd9e",
+                    "surface-container-high": "#e8e8e9",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#abcbdb",
+                    "primary-container": "#b8d8e8",
+                    "on-primary-fixed": "#001f29",
+                    "surface-dim": "#dadadb",
+                    "inverse-surface": "#2f3131",
+                    "surface-container-low": "#f4f3f4",
+                    "tertiary-container": "#fac9aa",
+                    "surface-tint": "#446370",
+                    "background": "#faf9fa",
+                    "on-secondary-fixed": "#281800",
+                    "tertiary": "#7b563e",
+                    "on-surface": "#1a1c1d",
+                    "on-background": "#1a1c1d",
+                    "surface": "#faf9fa",
+                    "secondary-container": "#ffb21d",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f1f0f1",
+                    "surface-container-highest": "#e3e2e3",
+                    "secondary-fixed": "#ffddaf",
+                    "outline": "#72787b",
+                    "on-tertiary-container": "#77533a",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "md": "24px",
+                    "margin": "32px",
+                    "xs": "4px",
+                    "xl": "64px",
+                    "sm": "12px",
+                    "gutter": "24px",
+                    "lg": "48px"
+            },
+            "fontFamily": {
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "h2": ["Dancing Script"],
+                    "button": ["Plus Jakarta Sans"],
+                    "h1": ["Dancing Script"],
+                    "display": ["Dancing Script"],
+                    "body-md": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #FFF8EC; color: #3D2C00; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .warm-shadow { box-shadow: 0 8px 20px rgba(61, 44, 0, 0.05); }
+        .active-nav { color: #F0A500; font-weight: 700; border-bottom: 2px solid #F0A500; padding-bottom: 4px; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md">
+<!-- TopNavBar -->
+<header class="bg-[#FFF8EC] dark:bg-stone-950 docked full-width top-0 sticky z-50 shadow-[0_8px_20px_rgba(61,44,0,0.05)]">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-3xl font-bold italic text-[#3D2C00] dark:text-amber-500 font-h1">PublicGuide AI</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#3D2C00] dark:text-stone-300 hover:text-[#F0A500] font-medium tracking-wide font-label-md" href="#">Services</a>
+<a class="text-[#3D2C00] dark:text-stone-300 hover:text-[#F0A500] font-medium tracking-wide font-label-md" href="#">AI Guide</a>
+<a class="text-[#F0A500] dark:text-amber-400 font-bold border-b-2 border-[#F0A500] pb-1 font-label-md" href="#">Locator</a>
+<a class="text-[#3D2C00] dark:text-stone-300 hover:text-[#F0A500] font-medium tracking-wide font-label-md" href="#">Scam Alerts</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 rounded-xl bg-secondary-container text-on-secondary-container font-button hover:bg-amber-100 transition-all active:scale-95">Sign In</button>
+</div>
+</nav>
+</header>
+<main class="flex-grow w-full max-w-7xl mx-auto px-8 py-10 flex flex-col gap-8">
+<!-- Content Header & Search -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<h1 class="font-display text-display text-primary">Find a Support Center</h1>
+<p class="font-body-lg text-body-lg text-outline max-w-md">Locate certified public guidance centers near you for in-person assistance and safe documentation processing.</p>
+</div>
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary">search</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-xl border-none bg-white warm-shadow focus:ring-2 focus:ring-primary-container text-body-md" placeholder="Enter zip code or city name..." type="text"/>
+</div>
+</section>
+<!-- Main Layout: Sidebar & Map -->
+<div class="flex flex-col lg:flex-row h-[700px] gap-gutter">
+<!-- Left: Service Centers List -->
+<aside class="w-full lg:w-1/3 flex flex-col gap-4 overflow-y-auto pr-2 custom-scrollbar">
+<!-- Center Card 1 -->
+<article class="bg-primary-container p-md rounded-xl warm-shadow border-l-4 border-secondary flex flex-col gap-4 transition-all hover:translate-y-[-2px] hover:shadow-lg">
+<div class="flex justify-between items-start">
+<div>
+<span class="inline-block px-3 py-1 rounded-full bg-white/30 text-xs font-bold uppercase tracking-wider mb-2">Closest to You</span>
+<h3 class="font-label-md text-xl text-on-primary-fixed">Downtown Civic Hub</h3>
+</div>
+<span class="text-secondary font-bold">0.8 mi</span>
+</div>
+<div class="flex items-start gap-2 text-on-primary-container opacity-80">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<p class="text-sm">452 Morning Glory Ave, Suite 200, Metropolis</p>
+</div>
+<div class="flex gap-3 mt-2">
+<button class="flex-1 bg-secondary text-white py-3 rounded-lg font-button flex items-center justify-center gap-2 hover:bg-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-sm">near_me</span> Navigate
+                        </button>
+<button class="flex-1 bg-white/50 text-on-primary-container py-3 rounded-lg font-button hover:bg-white/80 transition-colors">Details</button>
+</div>
+</article>
+<!-- Center Card 2 -->
+<article class="bg-white p-md rounded-xl warm-shadow flex flex-col gap-4 transition-all hover:translate-y-[-2px] hover:shadow-lg">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-label-md text-xl text-on-surface">Westside Support Station</h3>
+</div>
+<span class="text-outline font-bold">2.4 mi</span>
+</div>
+<div class="flex items-start gap-2 text-outline">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<p class="text-sm">812 Willow Creek Blvd, Metropolis</p>
+</div>
+<div class="flex gap-3 mt-2">
+<button class="flex-1 bg-secondary text-white py-3 rounded-lg font-button flex items-center justify-center gap-2 hover:bg-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-weight="fill">near_me</span> Navigate
+                        </button>
+<button class="flex-1 bg-surface-container text-on-surface py-3 rounded-lg font-button hover:bg-surface-variant transition-colors">Details</button>
+</div>
+</article>
+<!-- Center Card 3 -->
+<article class="bg-white p-md rounded-xl warm-shadow flex flex-col gap-4 transition-all hover:translate-y-[-2px] hover:shadow-lg">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-label-md text-xl text-on-surface">Riverside Public Office</h3>
+</div>
+<span class="text-outline font-bold">4.1 mi</span>
+</div>
+<div class="flex items-start gap-2 text-outline">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<p class="text-sm">1029 Waterway Path, Metropolis</p>
+</div>
+<div class="flex gap-3 mt-2">
+<button class="flex-1 bg-secondary text-white py-3 rounded-lg font-button flex items-center justify-center gap-2 hover:bg-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-sm">near_me</span> Navigate
+                        </button>
+<button class="flex-1 bg-surface-container text-on-surface py-3 rounded-lg font-button hover:bg-surface-variant transition-colors">Details</button>
+</div>
+</article>
+<!-- Center Card 4 -->
+<article class="bg-white p-md rounded-xl warm-shadow flex flex-col gap-4 transition-all hover:translate-y-[-2px] hover:shadow-lg">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-label-md text-xl text-on-surface">East Gate Service Point</h3>
+</div>
+<span class="text-outline font-bold">5.7 mi</span>
+</div>
+<div class="flex items-start gap-2 text-outline">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<p class="text-sm">55 Sunrise Terrace, Metropolis</p>
+</div>
+<div class="flex gap-3 mt-2">
+<button class="flex-1 bg-secondary text-white py-3 rounded-lg font-button flex items-center justify-center gap-2 hover:bg-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-sm">near_me</span> Navigate
+                        </button>
+<button class="flex-1 bg-surface-container text-on-surface py-3 rounded-lg font-button hover:bg-surface-variant transition-colors">Details</button>
+</div>
+</article>
+</aside>
+<!-- Right: Interactive Map View -->
+<section class="flex-grow relative rounded-2xl overflow-hidden warm-shadow bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A highly detailed overhead map of a clean, modern city with soft pastel-toned streets and landmarks. The map features elegant, minimalist UI markers in amber and sky blue indicating service center locations. The lighting is bright and morning-like, consistent with a sun-drenched aesthetic. Subtle elevation is shown through soft shadows on city blocks, creating a tactile, paper-like feel." data-location="Metropolis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcSF7X-TUZm79AHoXr3xoL_YelwxFYd3Wl85oCWZkAVsiub-jXYhpSjXlFz5_9lFgvtECRV-kZNbLe-6hXqr3HVnt6TAApHr4y6b-dxrwNOsXp8glMiA3P-KE92CkYjWXUAEjiry0Xo9jDVszFTRYZCCv6xSrSWbTEBYyM0RlynDuwojvDZzfnJ5fjoxXlr0PAva0zIkh2R0GC6JFVBtO_ZP5amSPKNr7wp6qfZcmfaPMRrNp_ItkkD_9T73XUBBGbc6UK1eVc6bfL"/>
+<!-- Map UI Overlays -->
+<div class="absolute top-6 right-6 flex flex-col gap-2">
+<button class="w-12 h-12 bg-white rounded-xl warm-shadow flex items-center justify-center text-primary hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-12 h-12 bg-white rounded-xl warm-shadow flex items-center justify-center text-primary hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4 bg-white/90 backdrop-blur-md px-6 py-3 rounded-full warm-shadow border border-white">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span class="text-xs font-bold text-on-surface">Available</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary opacity-40"></div>
+<span class="text-xs font-bold text-on-surface">Busy</span>
+</div>
+<div class="w-px h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<span class="text-xs font-bold text-on-surface">Closed</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#FFF8EC] dark:bg-stone-950 full-width bottom mt-20 border-t border-amber-100 dark:border-stone-800">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 max-w-7xl mx-auto gap-4">
+<div class="flex flex-col gap-2">
+<div class="text-xl font-bold italic text-[#3D2C00] font-h2">PublicGuide AI</div>
+<p class="text-[#3D2C00] dark:text-stone-400 text-sm font-normal font-body-md">© 2024 PublicGuide AI. Approachable Public Guidance.</p>
+</div>
+<div class="flex gap-8 text-sm font-normal">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#F0A500] dark:hover:text-amber-400 transition-colors font-body-md" href="#">Privacy Policy</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#F0A500] dark:hover:text-amber-400 transition-colors font-body-md" href="#">Terms of Service</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#F0A500] dark:hover:text-amber-400 transition-colors font-body-md" href="#">Contact Us</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#F0A500] dark:hover:text-amber-400 transition-colors font-body-md" href="#">Accessibility</a>
+</div>
+</div>
+</footer>
+</body></html>
